@@ -107,7 +107,7 @@ main {
 
 .description-img {
     width: 8em;
-    margin: -2em 2em 0 0;
+    margin: -1em 2em 0 0;
     float: right;
 }
 
@@ -115,6 +115,10 @@ main {
     text-align: center;
     padding: 0;
     margin: 0 auto 3em;
+}
+
+.gallery:last-of-type {
+    margin: 0 auto 0;
 }
 
 .gallery-item {
@@ -139,15 +143,17 @@ main {
 
 .rotate90 {
     transform: rotateZ(90deg);
+    -webkit-transform: rotateZ(90deg);
 }
 
 #main-logo {
     max-width: 10em;
     border-radius: 0em;
-    position: relative;
+    position: absolute;
     display: block;
     top: -6.3em;
-    margin: 0 auto;
+    left: 50%;
+    margin-left: -86px;
     height: 13em;
 }
 
@@ -155,6 +161,7 @@ main {
     width: 95vw;
     height: 0.3em;
     margin: 7em 0 0 0;
+    text-align: center;
     position: relative;
     background-color: green;
     border-radius: 1em;
@@ -163,11 +170,15 @@ main {
 .fblogo {
     text-align: center;
     width: 2em;
+    background-color: #228CF6;
+    border-radius: 0.3em;
+    margin: -15px 0 0 0;
 }
 
 #contact {
+    margin: 4em auto 0.5em;
+    z-index: 100;
     text-align: center;
-    margin: 4em 0 0.5em 0;
 }
 
 @media (max-width: 1200px) {
@@ -183,7 +194,6 @@ main {
 
     #top-logo {
         max-width: 17em;
-        top: -6.7em;
     }
 }
 
@@ -202,6 +212,28 @@ main {
         padding: 0;
         font-size: 1em;
     }
+}
+
+@media (max-width: 1236px) and (orientation: landscape) {
+    .gallery-item img {
+        width: 9em;
+        height: 9em;
+        max-width: 29vw;
+    }
+
+}
+
+@media (max-width: 800px) and (orientation: landscape) {
+    .gallery-item img {
+        width: 9em;
+        height: 9em;
+        max-width: 29vw;
+    }
+
+    .gallery-item {
+        margin: 0 0 -1.5em 0;
+    }
+
 }
 
 @media (max-width: 622px) {
@@ -249,11 +281,11 @@ main {
 
         .description-img {
             width: 7em;
-            margin: -2em -1em 0 0;
+            margin: -1em -1.2em 0 0;
         }
 }
 
-@media (max-width: 506px) {
+@media (max-width: 506px) and (orientation: portrait) {
     .gallery-item img {
         width: 11em;
         height: 11em;
